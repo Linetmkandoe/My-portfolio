@@ -1,103 +1,187 @@
 import Image from "next/image";
+import {
+  FaReact,
+  FaPython,
+  FaGitAlt,
+  FaWifi,
+  FaFigma,
+  FaSearch,
+  FaUsers,
+  FaFileAlt,
+} from "react-icons/fa";
+
+import {
+  SiNextdotjs,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiTableau,
+  SiCoda,
+  SiJavascript,
+  SiEspressif,
+} from "react-icons/si";
+
+import { MdDesignServices } from "react-icons/md";
+import { PiGraph } from "react-icons/pi";
 
 export default function Home() {
+  const skills = [
+    { name: "Figma", icon: <FaFigma className="text-green-600 text-7xl" />, level: "95%" },
+    { name: "Adobe Illustrator", icon: <SiAdobeillustrator className="text-green-600 text-7xl" />, level: "98%" },
+    { name: "Adobe Photoshop", icon: <SiAdobephotoshop className="text-green-600 text-7xl" />, level: "90%" },
+    { name: "React", icon: <FaReact className="text-green-600 text-7xl" />, level: "85%" },
+    { name: "Next.js", icon: <SiNextdotjs className="text-green-600 text-7xl" />, level: "85%" },
+    { name: "JavaScript", icon: <SiJavascript className="text-green-600 text-7xl" />, level: "88%" },
+    { name: "Python", icon: <FaPython className="text-green-600 text-7xl" />, level: "75%" },
+    { name: "Git", icon: <FaGitAlt className="text-green-600 text-7xl" />, level: "80%" },
+    { name: "Tableau", icon: <SiTableau className="text-green-600 text-7xl" />, level: "60%" },
+    { name: "Coda", icon: <SiCoda className="text-green-600 text-7xl" />, level: "70%" },
+  ];
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <header className="fixed top-0 left-0 w-full bg-white shadow-md z-80 p-4 flex justify-center">
+          <h1 className="text-2xl font-extrabold text-green-400 font-[cursive]">Linet Mkandoe Ndau</h1>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+        <section className="flex flex-col-reverse md:flex-row items-center justify-between pt-4 bg-white min-h-screen">
+          <div className="max-w-xl text-center md:text-left md:pr-10">
+            <h1 className="text-5xl font-bold text-gray-800 mb-4">
+              Hello,<br />I am a <span className="text-green-600">Software Engineer.</span>
+            </h1>
+            <p className="text-2xl text-gray-700 mb-8">
+              I blend thoughtful research with creative design to craft intuitive, user-focused web experiences.
+              By leveraging modern technologies, I build solutions that not only look great but solve real-world problems —
+              making technology accessible, meaningful, and impactful.
+            </p>
+            <button className="bg-green-900 text-white px-6 py-2 rounded hover:bg-blue-800 transition">
+              Get in Touch
+            </button>
+          </div>
+
+          <div className="w-100 h-100 mb-10 md:mb-0 md:ml-70">
+            <img
+              src={"/linet.jpg"}
+              alt="my profile"
+              className="rounded-full object-cover w-full h-full shadow-lg"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </div>
+        </section>
+
+        <section className="bg-green-100 py-16 px-6 sm:px-20" id="about">
+          <div>
+            <h2 className="text-5xl font-bold text-green-600 mb-6 ml-140">About Me</h2>
+          </div>
+
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+            <div className="flex-shrink-0 md:mb-0">
+              <img
+                src="/linet.jpg"
+                alt="Linet profile"
+                className="rounded-full object-cover w-80 h-80 shadow-lg"
+              />
+            </div>
+
+            <div>
+              <p className="text-sm sm:text-xl md:text-2xl text-gray-700 mt-4 leading-relaxed">
+                I approach every problem with empathy, curiosity, and a drive to design solutions that truly matter.
+                With a background that blends software engineering, user experience research, and creative design,
+                I enjoy turning complex challenges into accessible and impactful digital experiences.
+                Whether it's through thoughtful research, clean code, or intuitive design,
+                I'm committed to building technology that feels human-centered and purpose-driven.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ marginTop: '2rem' }}>
+          <h2 className="text-5xl font-bold text-green-600 mb-6 ml-160">🛠 Skills</h2>
+          <div
+            className="grid gap-20 sm:gap-29  mt-2"
+            style={{ gridTemplateColumns: 'repeat(5, minmax(0, 1fr))' }}
           >
-            Read our docs
-          </a>
+            {skills.map((skill, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                {skill.icon}
+                <p className="mt-2 text-2xl font-semibold">{skill.name}</p>
+                <p className="text-1xl text-gray-600">{skill.level}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+         
+
+  <section className=" py-16 px-6 sm:px-20" id="research-design">
+  <h2 className="text-4xl sm:text-5xl font-bold text-green-600 mb-10 ml-130">💡Projects</h2>
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-2xl sm:text-3xl font-bold text-gray-600 mb-10 ml-10"> Design Projects</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="/album.jpg" alt="Project 1" className="w-full h-70 object-cover " />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-green-800">Strength of a Woman</h3>
+          <p className="mt-2 text-2xl text-gray-800">"A visual tribute to resilience and serenity — ‘Strength of a Woman’ captures the quiet power, 
+            soulful depth, and graceful defiance of femininity through design. Where peace meets power, this album cover becomes both a whisper and a roar."
+          </p>
+         <a
+         href="https://www.behance.net/gallery/227316607/Music-Album"
+         target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
+        >Demo
+        </a>
+
         </div>
+    </div>
+
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="/desktop.jpg" alt="Project 2" className="w-full h-70 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-green-800">Kipepeo Fashion Design</h3>
+          <p className="mt-2 text-2xl text-gray-800">Kipepeo Fashion Design is a user-centered e-commerce project built to 
+             simplify the shopping experience. It enables customers to easily browse, select, and purchase fashion items
+              with a clean interface and smooth navigation — making fashion more accessible and intuitive.
+</p>
+   <a
+  href="https://www.behance.net/gallery/227322595/Kipepeo-Fashion-Design"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
+>
+  Demo
+</a>
+        </div>
+      </div>
+      <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="/aquasense.jpg" alt="Project 2" className="w-full h-70 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-green-800">Aquasense solutions</h3>
+          <p className="mt-2 text-2xl text-gray-800">AquaSense is a research-led solution that detects drainage blockages and empowers estate 
+            managers with real-time alerts—turning hidden problems into visible, actionable insights.
+</p>
+   <a
+  href="https://www.behance.net/gallery/227325111/Aquasense"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
+>
+  Demo
+</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+        <section style={{ marginTop: '2rem' }}>
+          <h2 className="text-5xl font-bold text-green-600 mb-6">📬 Contact</h2>
+          <p>Email: mkandoelinet@gmail.com</p>
+          <p>GitHub: github.com/linetmkandoe</p>
+          <p>LinkedIn: linkedin.com/in/linetmkandoe</p>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
