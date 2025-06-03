@@ -41,7 +41,19 @@ export default function Home() {
   ];
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="
+  grid 
+  grid-rows-[20px_1fr_20px] 
+  items-center 
+  justify-items-center 
+  min-h-screen 
+  p-4 sm:p-8 md:p-12 lg:p-20 
+  pb-20 
+  ml-0 sm:ml-4 md:ml-8 lg:ml-12 
+  gap-8 sm:gap-12 md:gap-16 
+  font-[family-name:var(--font-geist-sans)]
+">
+
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-80 p-4 flex justify-center">
           
@@ -57,7 +69,7 @@ export default function Home() {
   </nav>
         </header>
 
-        <section className="flex flex-col-reverse md:flex-row items-center justify-between pt-4 bg-white min-h-screen">
+        <section className="flex flex-col-reverse md:flex-row items-center ml-16 justify-between pt-4 bg-white min-h-screen">
           <div className="max-w-xl text-center md:text-left md:pr-10">
             <h1 className="text-5xl font-bold text-gray-800 mb-4">
               Hello,<br />I am a <span className="text-green-600">Software Engineer.</span>
@@ -67,9 +79,9 @@ export default function Home() {
               By leveraging modern technologies, I build solutions that not only look great but solve real-world problems —
               making technology accessible, meaningful, and impactful.
             </p>
-            <button className="bg-green-900 text-white px-6 py-2 rounded hover:bg-blue-800 transition">
-              Get in Touch
-            </button>
+          <a href="#contact" className="bg-green-900  text-2xl text-white px-6 py-2 rounded hover:bg-yellow-500 transition inline-block">
+  Get in Touch
+</a>
           </div>
 
           <div className="w-100 h-100 mb-10 md:mb-0 md:ml-70">
@@ -83,7 +95,7 @@ export default function Home() {
 
         <section className="bg-green-100 py-16 px-6 sm:px-20" id="about">
           <div>
-            <h2 className="text-5xl font-bold text-green-600 mb-6 ml-140">About Me</h2>
+            <h2 className="text-5xl font-bold text-green-600 mb-6 ml-110">About Me</h2>
           </div>
 
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
@@ -108,7 +120,7 @@ export default function Home() {
         </section>
 
         <section style={{ marginTop: '2rem' }}>
-          <h2 id="skills" className="text-5xl font-bold text-green-600 mb-6 ml-160">🛠 Skills</h2>
+          <h2 id="skills" className="text-5xl font-bold text-green-600 mb-6 ml-140">🛠 Skills</h2>
           <div
             className="grid gap-20 sm:gap-29  mt-2"
             style={{ gridTemplateColumns: 'repeat(5, minmax(0, 1fr))' }}
@@ -125,7 +137,7 @@ export default function Home() {
          
 
   <section className=" py-16 px-6 sm:px-20" id="research-design">
-  <h2 id="projects" className="text-4xl sm:text-5xl font-bold text-green-600 mb-10 ml-130">💡Projects</h2>
+  <h2 id="projects" className="text-4xl sm:text-5xl font-bold text-green-600 mb-10 ml-100">💡Projects</h2>
   
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
@@ -188,14 +200,15 @@ export default function Home() {
   
   <div className="grid grid-cols-1 mt-16 sm:grid-cols-2 md:grid-cols-3 gap-10">
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-        <img src="/album.jpg" alt="Project 1" className="w-full h-70 object-cover " />
+        <img src="/drainage.jpg" alt="Project 1" className="w-full h-70 object-cover " />
         <div className="p-6">
-          <h3 className="text-2xl font-semibold text-green-800">aquasense</h3>
-          <p className="mt-2 text-2xl text-gray-800">"A visual tribute to resilience and serenity — ‘Strength of a Woman’ captures the quiet power, 
-            soulful depth, and graceful defiance of femininity through design. Where peace meets power, this album cover becomes both a whisper and a roar."
+          <h3 className="text-2xl font-semibold text-green-800">Aquasense Usability Test</h3>
+          <p className="mt-2 text-2xl text-gray-800">Conducted usability testing to evaluate the effectiveness and intuitiveness of the AquaSense interface, 
+            a real-time drainage monitoring system. Engaged target users in scenario-based tasks to identify pain points, measure task success rates, 
+            and gather feedback. 
           </p>
          <a
-         href="https://www.behance.net/gallery/227316607/Music-Album"
+         href="https://docs.google.com/document/d/13aCvJc0DOlqBoVuSobDMvzjnrR_4S0dlcX7rgiW0K-A/edit?tab=t.0"
          target="_blank"
         rel="noopener noreferrer"
         className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
@@ -206,15 +219,14 @@ export default function Home() {
     </div>
 
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-        <img src="/desktop.jpg" alt="Project 2" className="w-full h-70 object-cover" />
+        <img src="/system.webp" alt="Project 2" className="w-full h-70 object-cover" />
         <div className="p-6">
-          <h3 className="text-2xl font-semibold text-green-800">researche</h3>
-          <p className="mt-2 text-2xl text-gray-800">Kipepeo Fashion Design is a user-centered e-commerce project built to 
-             simplify the shopping experience. It enables customers to easily browse, select, and purchase fashion items
-              with a clean interface and smooth navigation — making fashion more accessible and intuitive.
+          <h3 className="text-2xl font-semibold text-green-800">Primary Research</h3>
+          <p className="mt-2 text-2xl text-gray-800">Collected firsthand data through interviews and field observations to understand how plastic waste impacts drainage systems.
+            The findings shaped the design and functionality of the AquaSense monitoring solution.
 </p>
    <a
-  href="https://www.behance.net/gallery/227322595/Kipepeo-Fashion-Design"
+  href="https://docs.google.com/document/d/1Pm1KeF3ziDCcx8l4AN5sxn-zuL6lw28jvSD1E4ZTEyw/edit?tab=t.0"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
@@ -224,14 +236,14 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-        <img src="/aquasense.jpg" alt="Project 2" className="w-full h-70 object-cover" />
+        <img src="/tea.jpg" alt="Project 2" className="w-full h-70 object-cover" />
         <div className="p-6">
-          <h3 className="text-2xl font-semibold text-green-800">solutions</h3>
-          <p className="mt-2 text-2xl text-gray-800">AquaSense is a research-led solution that detects drainage blockages and empowers estate 
-            managers with real-time alerts—turning hidden problems into visible, actionable insights.
+          <h3 className="text-2xl font-semibold text-green-800">Umuhinzi Solution</h3>
+          <p className="mt-2 text-2xl text-gray-800"> A study done to support small-scale farmers with weather updates, market prices, and farming tips.
+             I contributed to user research and helped design a simple, farmer-friendly interface.
 </p>
    <a
-  href="https://www.behance.net/gallery/227325111/Aquasense"
+  href="https://docs.google.com/document/d/1WpgZX8S2Pd0bpejveRiFYBgz4aBIkpldzz0xr2T05ko/edit?tab=t.0"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
@@ -247,12 +259,12 @@ export default function Home() {
 
 
        <section
-  className="bg-green-100 ml-20 py-16 px-6 sm:px-20 flex flex-col items-center justify-center gap-6"
+  className="ml-20 mx-auto  py-16 px-6 sm:px-20 flex flex-col items-center justify-center gap-6"
   id="contact"
 >
 <div className="flex flex-col md:flex-row gap-35 items-start justify-between">
           <div className="w-xl">
-        <h2 className="text-5xl font-bold text-green-600 mb-10">📬 Contact</h2>
+        <h2 id="contact"  className="text-5xl font-bold text-green-600 mb-10">📬 Contact</h2>
         <form
           action="https://formsubmit.co/mkandoelinet@gmail.com"
           method="POST"
@@ -326,7 +338,20 @@ export default function Home() {
          </div>
          </div>
       </section>
+      <footer className="bg-gray-800 w-full text-white py-6 text-center">
+  <a
+ 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-green-500 hover:underline"
+  >
+    my protfolio.com
+  </a>
+  <p className="mt-2 text-sm">&copy; {new Date().getFullYear()} Linet Mkandoe Ndau. All rights reserved.</p>
+</footer>
+
       </main>
     </div>
+    
   );
 }
