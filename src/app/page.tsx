@@ -18,12 +18,13 @@ import {
   SiCoda,
   SiJavascript,
   SiEspressif,
+  
 } from "react-icons/si";
 
 import { MdDesignServices } from "react-icons/md";
 import { PiGraph } from "react-icons/pi";
-import { Linkedin, Github, Behance } from 'lucide-react';
-
+import { Linkedin, Github,  } from 'lucide-react';
+import { FaBehance } from "react-icons/fa";
 
 export default function Home() {
   const skills = [
