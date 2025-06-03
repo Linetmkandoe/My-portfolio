@@ -22,6 +22,8 @@ import {
 
 import { MdDesignServices } from "react-icons/md";
 import { PiGraph } from "react-icons/pi";
+import { Linkedin, Github, Behance } from 'lucide-react';
+
 
 export default function Home() {
   const skills = [
@@ -41,7 +43,17 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-80 p-4 flex justify-center">
-          <h1 className="text-2xl font-extrabold text-green-400 font-[cursive]">Linet Mkandoe Ndau</h1>
+          
+          <nav>
+    <ul className="flex space-x-10 text-gray-700 text-2xl font-medium">
+      <h1 className="text-2xl font-extrabold  text-green-400 font-[cursive]">Linet Mkandoe Ndau</h1>
+      <li><a href="#home" className="hover:text-green-400">Home</a></li>
+      <li><a href="#about" className="hover:text-green-400">About</a></li>
+      <li><a href="#skills" className="hover:text-green-400">Skills</a></li>
+      <li><a href="#projects" className="hover:text-green-400">Projects</a></li>
+      <li><a href="#contact" className="hover:text-green-400">Contact</a></li>
+    </ul>
+  </nav>
         </header>
 
         <section className="flex flex-col-reverse md:flex-row items-center justify-between pt-4 bg-white min-h-screen">
@@ -95,7 +107,7 @@ export default function Home() {
         </section>
 
         <section style={{ marginTop: '2rem' }}>
-          <h2 className="text-5xl font-bold text-green-600 mb-6 ml-160">🛠 Skills</h2>
+          <h2 id="skills" className="text-5xl font-bold text-green-600 mb-6 ml-160">🛠 Skills</h2>
           <div
             className="grid gap-20 sm:gap-29  mt-2"
             style={{ gridTemplateColumns: 'repeat(5, minmax(0, 1fr))' }}
@@ -112,9 +124,8 @@ export default function Home() {
          
 
   <section className=" py-16 px-6 sm:px-20" id="research-design">
-  <h2 className="text-4xl sm:text-5xl font-bold text-green-600 mb-10 ml-130">💡Projects</h2>
-  <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-2xl sm:text-3xl font-bold text-gray-600 mb-10 ml-10"> Design Projects</h2>
+  <h2 id="projects" className="text-4xl sm:text-5xl font-bold text-green-600 mb-10 ml-130">💡Projects</h2>
+  
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
         <img src="/album.jpg" alt="Project 1" className="w-full h-70 object-cover " />
@@ -171,16 +182,149 @@ export default function Home() {
       </div>
 
     </div>
-  </div>
+
+  
+  
+  <div className="grid grid-cols-1 mt-16 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="/album.jpg" alt="Project 1" className="w-full h-70 object-cover " />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-green-800">aquasense</h3>
+          <p className="mt-2 text-2xl text-gray-800">"A visual tribute to resilience and serenity — ‘Strength of a Woman’ captures the quiet power, 
+            soulful depth, and graceful defiance of femininity through design. Where peace meets power, this album cover becomes both a whisper and a roar."
+          </p>
+         <a
+         href="https://www.behance.net/gallery/227316607/Music-Album"
+         target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
+        >Demo
+        </a>
+
+        </div>
+    </div>
+
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="/desktop.jpg" alt="Project 2" className="w-full h-70 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-green-800">researche</h3>
+          <p className="mt-2 text-2xl text-gray-800">Kipepeo Fashion Design is a user-centered e-commerce project built to 
+             simplify the shopping experience. It enables customers to easily browse, select, and purchase fashion items
+              with a clean interface and smooth navigation — making fashion more accessible and intuitive.
+</p>
+   <a
+  href="https://www.behance.net/gallery/227322595/Kipepeo-Fashion-Design"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
+>
+  Demo
+</a>
+        </div>
+      </div>
+      <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="/aquasense.jpg" alt="Project 2" className="w-full h-70 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-green-800">solutions</h3>
+          <p className="mt-2 text-2xl text-gray-800">AquaSense is a research-led solution that detects drainage blockages and empowers estate 
+            managers with real-time alerts—turning hidden problems into visible, actionable insights.
+</p>
+   <a
+  href="https://www.behance.net/gallery/227325111/Aquasense"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-yellow-500 transition duration-300"
+>
+  Demo
+</a>
+        </div>
+      </div>
+
+    </div>
+
 </section>
 
 
-        <section style={{ marginTop: '2rem' }}>
-          <h2 className="text-5xl font-bold text-green-600 mb-6">📬 Contact</h2>
-          <p>Email: mkandoelinet@gmail.com</p>
-          <p>GitHub: github.com/linetmkandoe</p>
-          <p>LinkedIn: linkedin.com/in/linetmkandoe</p>
-        </section>
+       <section
+  className="bg-green-100 ml-20 py-16 px-6 sm:px-20 flex flex-col items-center justify-center gap-6"
+  id="contact"
+>
+<div className="flex flex-col md:flex-row gap-35 items-start justify-between">
+          <div className="w-xl">
+        <h2 className="text-5xl font-bold text-green-600 mb-10">📬 Contact</h2>
+        <form
+          action="https://formsubmit.co/mkandoelinet@gmail.com"
+          method="POST"
+          className="max-w-4xl mx-auto space-y-6 bg-white p-8 rounded-lg shadow-md"
+        >
+          <input type="hidden" name="_captcha" value="false"/>
+          <div>
+            <label className="block mb-2 text-lg text-gray-700">Name</label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+          <div>
+            <label className="block mb-2 text-lg text-gray-700">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+          <div>
+            <label className="block mb-2 text-lg text-gray-700">Message</label>
+            <textarea
+              name="message"
+              rows={5}
+              required
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+          <button
+            type="submit"
+            className="bg-green-600 text-white px-6 py-2 rounded hover:bg-yellow-500 transition"
+          >
+            Send Message
+          </button>
+        </form>
+        </div>
+        <div>
+      <h2 className="text-3xl text-gray-800 mt-24">Contact Info:</h2>
+      <p className="text-2xl mt-6 mb-6">Email: <a href="mailto:mkandoelinet@gmai.com">mkandoelinet@gmai.com</a></p>
+  <p className="text-2xl mt-6 mb-6">Phone: <a href="tel:+254110941162">+254110941162</a></p>
+  <p className="mt-6 mb-6 text-2xl">Location: Ngong Road 616, AkiraChix, Nairobi</p>
+
+ <div className="mt-4 flex gap-14 text-2xl text-green-600">
+  <a href="https://www.linkedin.com/in/linet-mkandoe-51379a2b3" target="_blank" style={{ marginRight: "10px" }}>
+    <img
+      src="https://cdn-icons-png.flaticon.com/24/174/174857.png"
+      alt="LinkedIn"
+      style={{ filter: 'invert(47%) sepia(98%) saturate(567%) hue-rotate(86deg) brightness(90%) contrast(86%)' }}
+    />
+  </a>
+  <a href="https://www.behance.net/linetndau" target="_blank" style={{ marginRight: "10px" }}>
+    <img
+      src="https://cdn-icons-png.flaticon.com/24/174/174876.png"
+      alt="Behance"
+      style={{ filter: 'invert(47%) sepia(98%) saturate(567%) hue-rotate(86deg) brightness(90%) contrast(86%)' }}
+    />
+  </a>
+  <a href="https://github.com/Linetmkandoe" target="_blank">
+    <img
+      src="https://cdn-icons-png.flaticon.com/24/25/25231.png"
+      alt="GitHub"
+      style={{ filter: 'invert(47%) sepia(98%) saturate(567%) hue-rotate(86deg) brightness(90%) contrast(86%)' }}
+    />
+  </a>
+</div>
+         </div>
+         </div>
+      </section>
       </main>
     </div>
   );
